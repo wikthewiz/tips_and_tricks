@@ -1,0 +1,4 @@
+Find executable name and pid using port 8080
+============================================
+"netstat -abno | grep -A1 -B1 8080" 
+
