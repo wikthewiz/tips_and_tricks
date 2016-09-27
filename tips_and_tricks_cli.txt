@@ -5,3 +5,133 @@ Find executable name and pid using port 8080
 Copy .ssh-keys over ssh to server
 =================================
 cat ~/.ssh/id_rsa.pub | ssh user@SERVER 'cat >> .ssh/authorized_keys'
+
+Vim
+---
+-----------------
+copy to clipboard
+------------------
+"+ - is the system clipboard so:
+"*yy -> copy line to clipboard.
+"*p -> paste from clipboard
+
+Linux: * - registry is the selection, th + - registry is the cut buffer
+Windows: * and + is the same
+-----------
+Record cmd
+-----------
+Start recording: q LOWER-CASE
+Stop recording: q
+Play recordoing: @ LOWER-CASE
+Repeat recording NN times: NN @ LOWER-CASE
+
+---------------------------
+Search for text in registry
+---------------------------
+Ctrl-R x , where x is the registry
+/Ctrk-R0 for current yanked word
+
+----------
+Registry 0
+----------
+This is the registry used when no registry is given.
+yy will store in registry 0.
+example: 
+    yy 
+    "0p
+will first copy the current line to 0 and then past it.
+
+-----------------
+Store in registry
+-----------------
+"<REGISTRY><COMMAND> 
+example store line in registry k: "kyy
+example paste registry k: "kp
+
+------------------
+Append to registry
+------------------
+Use capital letter.
+example append to registry k:"yyK
+
+------------------
+See all registries
+------------------
+:reg
+
+--------
+Bookmark
+--------
+create:        m<small_letter>
+create global: m<CAPITAL_LETTER>
+example: ma
+example global:mA
+
+goto start if line:'<the_bookmark_letter>
+goto exact pos:`<the_bookmark_letter>
+example: 'a
+
+-----------------------
+Case insensitive search
+-----------------------
+:set ic
+where ic is ignore case
+  or
+\c before search:
+/\ccaseinsensitive search
+---------------------
+Case sensitive search
+---------------------
+:set noic
+where noic is no ignore case
+
+--------------
+OracleDatabase
+--------------
+pcmwiklandt1650.orcl.emea.tibco.com
+
+-----------------------------------
+FIND: all sqlserver files and cp to 
+-----------------------------------
+mkdir ../sqlserver/
+find . -maxdepth 1 -iname "*sqlserver*" -exec cp {} ../sqlserver/ \;
+
+----------------------------------
+FIND process having a look on dll
+---------------------------------
+open: C:\Program\process_explorer\procexp.exe
+
+Select Find
+Select Find Handle or DLL
+Write the name of the proccess having a look.
+
+------------------------
+Pretty print json jdaddy
+------------------------
+gqaj - Pretty print
+gwaj - Takes JOSN from clipboard and add to cursor.
+
+------------
+CHECK MD5SUM
+------------
+md5sum -c - <<< "CHECKSUM FILE"
+
+------------------
+SELECT OUT XML TAB
+------------------
+outer:v+a+t
+inner:v+i+t
+toggle between top/bottom: o
+to copy:y
+to change:c
+
+-------------
+CHANGE SYNTAX
+-------------
+:set syntax=xml
+
+------------------
+Search from bottom
+------------------
+?bla will search from bottom and upp
+N will search previues find
