@@ -2,6 +2,10 @@ Find executable name and pid using port 8080
 ============================================
 "netstat -abno | grep -A1 -B1 8080" 
 
+copy over ssh
+=============
+scp FROM_FILE user@server:TO_FILE
+
 Copy .ssh-keys over ssh to server
 =================================
 cat ~/.ssh/id_rsa.pub | ssh user@SERVER 'cat >> .ssh/authorized_keys'
