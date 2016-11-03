@@ -19,6 +19,8 @@ copy to clipboard
 "*yy -> copy line to clipboard.
 "*p -> paste from clipboard
 
+"+yy -> copy line to clipboard.
+"+p -> paste from clipboard
 Linux: * - registry is the selection, th + - registry is the cut buffer
 Windows: * and + is the same
 -----------
