@@ -20,8 +20,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 " JSON pretty print and higlight
 Plugin 'https://github.com/elzr/vim-json.git'
-" Pretty print json
-Plugin 'git://github.com/tpope/vim-jdaddy.git'
 " ctrl-p fuzzy finder better then command-t because it doesn't demand ruby
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
@@ -35,7 +33,9 @@ call vundle#end()            " require
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
-behave mswin
+set noswapfile
+set nobackup
+set undodir=/tmp
 
 set nu
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=LightGrey
